@@ -1,0 +1,25 @@
+.chat {
+  .chat__cols {
+    display: flex;
+    &.chat__cols--mine {
+      justify-content: flex-end;
+    }
+    .chat__col {
+      margin-right: 10px;
+      &.chat__col--mine {
+        margin-right: 0;
+      }
+      .profile-img {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border: 0.5px solid black;
+        border-radius: 50% 0 50% 50%;
+      }
+      .chat__name {
+        width: 100%;
+        font-size: 14px;
+      }
+    }
+  }
+}
