@@ -1,7 +1,16 @@
 import React from "react";
+import Navigation from "./components/Navigation";
+import ChatArea from "./components/ChatArea";
+import ChatInput from "./components/ChatInput";
 
 function App() {
-  return <div>Hello KB</div>;
+  return (
+    <>
+      <Navigation />
+      <ChatArea />
+      <ChatInput />
+    </>
+  );
 }
 
 export default App;

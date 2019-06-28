@@ -1,0 +1,39 @@
+.chat {
+  .chat__cols {
+    display: flex;
+    &.chat__cols--mine {
+      justify-content: flex-end;
+    }
+    .chat__col {
+      &.chat__col--mine {
+        margin-right: 10px;
+      }
+      .profile-img {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border: 0.5px solid black;
+        border-radius: 50% 0 50% 50%;
+      }
+      .chat__name {
+        width: 100%;
+        font-size: 14px;
+      }
+      .chat__content {
+        display: flex;
+        align-items: center;
+        max-width: 200px;
+        margin-top: 10px;
+        padding: 15px;
+        background-color: #f1f3f5;
+        border-radius: 0 40px 40px 40px;
+        line-height: 1.25em;
+        font-size: 15px;
+        &.chat__content--mine {
+          background-color: #ffe066;
+          border-radius: 40px 0 40px 40px;
+        }
+      }
+    }
+  }
+}
