@@ -4,7 +4,6 @@ import "./styles.scss";
 
 const ScenarioPage = props => {
   const { history, changeChat, user1, user2 } = props;
-  console.log(user1, user2);
 
   return (
     <div className="scenario-page">
@@ -22,23 +21,19 @@ const ScenarioPage = props => {
                   {
                     type: "message",
                     content:
-                      "지난 세 달 평균 지출액보다 많은 지출액이 발생했어요!"
+                      "📢 국민님! 지난 세달 평균 지출액보다 많은 지출액이 발생했어요!!"
+                  },
+                  {
+                    type: "message",
+                    content:
+                      "세이프핀 기능을 통해 과도한 카드 지출을 예방하고, 스마트한 자산관리를 받아보지 않으실래요?"
                   },
                   {
                     type: "button",
                     content: [
-                      { value: "네!", url: "" },
+                      { value: "네!", url: "/new" },
                       { value: "아뇨.", url: "" }
                     ]
-                  }
-                ]
-              },
-              {
-                isMine: true,
-                data: [
-                  {
-                    type: "message",
-                    content: "네!"
                   }
                 ]
               }
@@ -82,7 +77,7 @@ const ScenarioPage = props => {
                 data: [
                   {
                     type: "message",
-                    content: `BOOM!!!!! 탕진님은 세이프핀 금액 ${user2.recommendation.replace(
+                    content: `BOOM💣💣💣 탕진님은 세이프핀 금액 ${user2.recommendation.replace(
                       /\B(?=(\d{3})+(?!\d))/g,
                       ","
                     )}원을 초과하셨어요! 돈을 흥청망청 쓰셨군요!! (초과 금액 ${String(

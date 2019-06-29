@@ -17,7 +17,7 @@ const RecoForm = props => {
         </span>
         원 입니다.
       </div>
-      <div className="reco__question">이대로 설정하시겠어요?</div>
+      <div className="reco__question">이대로 세이프핀을 설정하시겠어요?</div>
       <div className="reco__btns">
         <button className="reco__btn" onClick={() => history.push("/complete")}>
           네!
