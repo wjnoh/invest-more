@@ -1,2 +1,2 @@
-import InputForm from "./presenter";
-export default InputForm;
+import Container from "./container";
+export default Container;

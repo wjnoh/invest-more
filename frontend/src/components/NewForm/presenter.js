@@ -19,7 +19,7 @@ const NewForm = props => {
         <option value="2">직장인</option>
       </select>
       <input
-        type="text"
+        type="number"
         className="input"
         name="income"
         placeholder="월 고정 수입을 입력하세요."
@@ -27,7 +27,7 @@ const NewForm = props => {
         onChange={e => handleChange(e)}
       />
       <input
-        type="text"
+        type="number"
         className="input"
         name="expense"
         placeholder="지난달 지출을 입력하세요."
