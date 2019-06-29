@@ -46,7 +46,7 @@ class Container extends Component {
               },
               {
                 type: "message",
-                content: "소주님의 스마트한 금융생활에 똑똑이가 함께 할게요~♡"
+                content: "탕진님의 스마트한 금융생활에 똑똑이가 함께 할게요~♡"
               }
             ]
           }

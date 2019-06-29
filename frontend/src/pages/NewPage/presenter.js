@@ -7,7 +7,14 @@ const NewPage = props => {
 
   return (
     <div className="new-page">
-      <NewForm updateUser={updateUser} />
+      <div className="new-page__wrapper">
+        <img
+          src={require("../../images/Finance.svg")}
+          alt="graph"
+          className="new-page__img"
+        />
+        <NewForm updateUser={updateUser} />
+      </div>
     </div>
   );
 };

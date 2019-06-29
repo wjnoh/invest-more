@@ -5,7 +5,14 @@ import "./styles.scss";
 const InputPage = () => {
   return (
     <div className="input-page">
-      <InputForm />
+      <div className="input-page__wrapper">
+        <img
+          src={require("../../images/Stats.svg")}
+          className="input-page__img"
+          alt="graph"
+        />
+        <InputForm />
+      </div>
     </div>
   );
 };

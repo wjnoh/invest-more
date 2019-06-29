@@ -7,7 +7,14 @@ const InvestPage = props => {
 
   return (
     <div className="invest-page">
-      <InvestForm addChat={addChat} />
+      <div className="invest-page__wrapper">
+        <img
+          src={require("../../images/wallet.svg")}
+          alt=""
+          className="invest-page__img"
+        />
+        <InvestForm addChat={addChat} />
+      </div>
     </div>
   );
 };
