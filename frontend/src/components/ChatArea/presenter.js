@@ -8,27 +8,17 @@ const ChatArea = () => {
       <Chat
         isMine={false}
         data={[
-          { type: "message", content: "안녕하세요!" },
-          { type: "message", content: "반갑습니다!" },
+          {
+            type: "message",
+            content: "지난 세 달 평균 지출액보다 많은 지출액이 발생했어요!"
+          },
           {
             type: "button",
-            content: [
-              { value: "조회", url: "" },
-              { value: "조회", url: "" },
-              { value: "조회", url: "" },
-              { value: "조회", url: "" },
-              { value: "조회", url: "" }
-            ]
+            content: [{ value: "네!", url: "" }, { value: "아뇨.", url: "" }]
           }
         ]}
       />
-      <Chat
-        isMine={true}
-        data={[
-          { type: "message", content: "안녕하세요!" },
-          { type: "message", content: "반갑습니다!" }
-        ]}
-      />
+      <Chat isMine={true} data={[{ type: "message", content: "네!" }]} />
     </section>
   );
 };

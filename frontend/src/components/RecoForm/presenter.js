@@ -1,7 +1,10 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 import "./styles.scss";
 
-const RecoForm = () => {
+const RecoForm = props => {
+  const { history } = props;
+
   return (
     <div className="reco-form">
       <div className="reco__message">
@@ -13,10 +16,12 @@ const RecoForm = () => {
       <div className="reco__question">이대로 설정하시겠어요?</div>
       <div className="reco__btns">
         <button className="reco__btn">네!</button>
-        <button className="reco__btn">직접 설정할게요.</button>
+        <button className="reco__btn" onClick={() => history.push("/input")}>
+          직접 설정할게요.
+        </button>
       </div>
     </div>
   );
 };
 
-export default RecoForm;
+export default withRouter(RecoForm);
