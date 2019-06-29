@@ -8,7 +8,7 @@ const RecoPage = () => {
       <div className="reco-page__wrapper">
         <img
           className="reco__img"
-          src={require("../../images/Analytics.svg")}
+          src={require("../../images/Anal-Search.svg")}
           alt="anal"
         />
         <RecoForm />

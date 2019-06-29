@@ -4,6 +4,7 @@ import ChatPage from "./pages/ChatPage";
 import NewPage from "./pages/NewPage";
 import RecoPage from "./pages/RecoPage";
 import InputPage from "./pages/InputPage";
+import CompletePage from "./pages/CompletePage";
 
 function App() {
   return (
@@ -18,6 +19,11 @@ function App() {
         exact
         path="/input"
         render={({ match }) => <InputPage match={match} />}
+      />
+      <Route
+        exact
+        path="/complete"
+        render={({ match }) => <CompletePage match={match} />}
       />
       <Route
         exact
