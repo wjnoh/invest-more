@@ -1,26 +1,46 @@
-import React from "react";
+import React, { Component } from "react";
 import Chat from "../Chat";
 import "./styles.scss";
 
-const ChatArea = () => {
-  return (
-    <section className="chat-area">
-      <Chat
-        isMine={false}
-        data={[
+class ChatArea extends Component {
+  componentDidMount = () => {
+    this.chatAreaRef.scrollTop = this.chatAreaRef.scrollHeight;
+  };
+
+  componentDidUpdate() {
+    this.chatAreaRef.scrollTop = this.chatAreaRef.scrollHeight;
+  }
+
+  render() {
+    const { chat } = this.props;
+    const sample = [
+      {
+        isMine: false,
+        data: [
           {
             type: "message",
-            content: "지난 세 달 평균 지출액보다 많은 지출액이 발생했어요!"
+            content: "시나리오를 실행해주세요!"
           },
           {
             type: "button",
-            content: [{ value: "네!", url: "" }, { value: "아뇨.", url: "" }]
+            content: [{ value: "네!", url: "/" }, { value: "아뇨.", url: "" }]
           }
-        ]}
-      />
-      <Chat isMine={true} data={[{ type: "message", content: "네!" }]} />
-    </section>
-  );
-};
+        ]
+      }
+    ];
+
+    return (
+      <section className="chat-area" ref={ref => (this.chatAreaRef = ref)}>
+        {JSON.stringify(chat) !== JSON.stringify([])
+          ? chat.map((c, index) => {
+              return <Chat key={index} isMine={c.isMine} data={c.data} />;
+            })
+          : sample.map((c, index) => {
+              return <Chat key={index} isMine={c.isMine} data={c.data} />;
+            })}
+      </section>
+    );
+  }
+}
 
 export default ChatArea;

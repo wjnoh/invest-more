@@ -30,7 +30,11 @@ const Chat = props => {
       ) : (
         <ul className="chat__cols">
           <li className="chat__col">
-            <span className="profile-img" />
+            <img
+              src={require("../../images/ddokddok.png")}
+              className="profile-img"
+              alt="ddokddok"
+            />
           </li>
           <li className="chat__col">
             <span className="chat__name">똑똑이</span>
