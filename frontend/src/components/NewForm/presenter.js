@@ -1,9 +1,9 @@
 import React from "react";
 import "./styles.scss";
 
-const NewInputForm = () => {
+const NewForm = () => {
   return (
-    <div className="new-input-form">
+    <div className="new-form">
       <select className="input" name="job">
         <option value="student" selected="selected">
           학생
@@ -27,4 +27,4 @@ const NewInputForm = () => {
   );
 };
 
-export default NewInputForm;
+export default NewForm;

@@ -1,17 +1,13 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import ChatPage from "./pages/ChatPage";
-import NewInputPage from "./pages/NewInputPage";
+import NewPage from "./pages/NewPage";
 import RecoPage from "./pages/RecoPage";
 
 function App() {
   return (
     <Switch>
-      <Route
-        exact
-        path="/"
-        render={({ match }) => <NewInputPage match={match} />}
-      />
+      <Route exact path="/" render={({ match }) => <NewPage match={match} />} />
       <Route
         exact
         path="/reco"
