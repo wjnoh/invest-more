@@ -3,7 +3,7 @@ import { withRouter } from "react-router-dom";
 import "./styles.scss";
 
 const RecoForm = props => {
-  const { history } = props;
+  const { history, user } = props;
 
   return (
     <div className="reco-form">
@@ -11,7 +11,11 @@ const RecoForm = props => {
         고객님의 수익에 맞는
         <br />
         추천 평균 지출액은
-        <br />월 <span className="highlight">500,000</span>원 입니다.
+        <br />월{" "}
+        <span className="highlight">
+          {user.recommendation.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+        </span>
+        원 입니다.
       </div>
       <div className="reco__question">이대로 설정하시겠어요?</div>
       <div className="reco__btns">

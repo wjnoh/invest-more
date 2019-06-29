@@ -1,9 +1,8 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
 import "./styles.scss";
 
 const NewForm = props => {
-  const { history, job, income, expense, handleChange } = props;
+  const { job, income, expense, handleChange, handleSubmit } = props;
 
   return (
     <div className="new-form">
@@ -13,10 +12,10 @@ const NewForm = props => {
         value={job}
         onChange={e => handleChange(e)}
       >
-        <option value="1" defaultValue>
+        <option value="학생" defaultValue>
           학생
         </option>
-        <option value="2">직장인</option>
+        <option value="직장인">직장인</option>
       </select>
       <input
         type="number"
@@ -34,11 +33,11 @@ const NewForm = props => {
         value={expense}
         onChange={e => handleChange(e)}
       />
-      <button className="btn" onClick={() => history.push("/reco")}>
+      <div className="btn" onClick={e => handleSubmit(e)}>
         추천 지출액 확인
-      </button>
+      </div>
     </div>
   );
 };
 
-export default withRouter(NewForm);
+export default NewForm;

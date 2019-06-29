@@ -40,7 +40,7 @@ const InvestForm = props => {
         <option value="5">다소높은위험 2.89%</option>
         <option value="6">매우높은위험 6.65%</option>
       </select>
-      <button className="btn">가입하기</button>
+      <div className="btn">가입하기</div>
     </form>
   );
 };

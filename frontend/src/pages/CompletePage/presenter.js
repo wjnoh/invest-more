@@ -13,7 +13,7 @@ const CompletePage = () => {
         <span className="complete__message">
           절약과 투자의 시작!
           <br />
-          <span className="highlight">세이브 핀</span>이<br />
+          <span className="highlight">세이프 핀</span>이<br />
           설정되었습니다. :D
         </span>
       </div>

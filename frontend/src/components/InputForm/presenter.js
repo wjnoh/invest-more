@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.scss";
 
 const InputForm = props => {
-  const { limit, handleChange } = props;
+  const { limit, handleChange, handleSubmit } = props;
 
   return (
     <form className="input-form">
@@ -10,12 +10,14 @@ const InputForm = props => {
         type="number"
         className="input"
         name="limit"
-        placeholder="한달 지출액을 입력하세요."
+        placeholder="한달 지출 한도를 입력하세요."
         value={limit}
         onChange={e => handleChange(e)}
         required
       />
-      <button className="btn">설정하기</button>
+      <div className="btn" onClick={e => handleSubmit(e)}>
+        설정하기
+      </div>
     </form>
   );
 };
