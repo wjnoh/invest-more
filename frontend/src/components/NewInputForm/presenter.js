@@ -4,7 +4,7 @@ import "./styles.scss";
 const NewInputForm = () => {
   return (
     <div className="new-input-form">
-      <select className="new-input" name="job">
+      <select className="input" name="job">
         <option value="student" selected="selected">
           학생
         </option>
@@ -12,17 +12,17 @@ const NewInputForm = () => {
       </select>
       <input
         type="text"
-        className="new-input"
+        className="input"
         name="income"
         placeholder="월 고정 수입을 입력하세요."
       />
       <input
         type="text"
-        className="new-input"
+        className="input"
         name="expense"
         placeholder="지난달 지출을 입력하세요."
       />
-      <div className="new-submit">보내기</div>
+      <button className="submit">추천 지출액 확인</button>
     </div>
   );
 };
