@@ -15,7 +15,7 @@ const InputForm = props => {
         onChange={e => handleChange(e)}
         required
       />
-      <button className="submit">설정하기</button>
+      <button className="btn">설정하기</button>
     </form>
   );
 };

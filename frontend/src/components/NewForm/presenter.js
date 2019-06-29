@@ -34,7 +34,7 @@ const NewForm = props => {
         value={expense}
         onChange={e => handleChange(e)}
       />
-      <button className="submit" onClick={() => history.push("/reco")}>
+      <button className="btn" onClick={() => history.push("/reco")}>
         추천 지출액 확인
       </button>
     </div>

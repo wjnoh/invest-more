@@ -2,6 +2,12 @@ import React, { Component } from "react";
 import InvestForm from "./presenter";
 
 class Container extends Component {
+  componentDidMount() {
+    fetch("http://122.99.178.40:5000/productinformation")
+      .then(res => res.json())
+      .then(json => console.log(json));
+  }
+
   state = {
     money: undefined,
     period: undefined,
