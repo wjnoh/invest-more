@@ -119,6 +119,7 @@ def get_customer_data_from_customer_cd(customer_cd):
         data = data[data['customer_cd'] == customer_cd]
         data['accumulative_expenditure'] = get_accumulative_expenditure_of_customer_cd(customer_cd)
         data['previous_avg_payment'] = get_expenditure_from_customer_cd(customer_cd)        
+        data['balance']= get_customer_balance_from_customer_cd(customer_cd)
         if len(data) == 0:
             raise ValueError('고객코드 조회 불가')
         return return_json_form_df(data)
@@ -229,6 +230,14 @@ def get_customer_product_data_df():
     cur.execute("SELECT * FROM  "+table_name)
     data = pd.DataFrame(cur.fetchall(), columns = customer_product_columns)
     return data
+
+def get_customer_balance_from_customer_cd(customer_cd):
+    customer_cd = str(customer_cd)
+    data = get_customer_product_data_df()
+    data['customer_cd'] = data['customer_cd'].apply(lambda x: str(x))
+    data =data[data['customer_cd'] == customer_cd]
+    balance = data.groupby('customer_cd')['balance'].sum().iloc[0]    
+    return balance
 
 
 def get_expenditure_data_df():
