@@ -5,6 +5,7 @@ import NewPage from "./pages/NewPage";
 import RecoPage from "./pages/RecoPage";
 import InputPage from "./pages/InputPage";
 import CompletePage from "./pages/CompletePage";
+import InvestPage from "./pages/InvestPage";
 
 function App() {
   return (
@@ -24,6 +25,11 @@ function App() {
         exact
         path="/complete"
         render={({ match }) => <CompletePage match={match} />}
+      />
+      <Route
+        exact
+        path="/invest"
+        render={({ match }) => <InvestPage match={match} />}
       />
       <Route
         exact

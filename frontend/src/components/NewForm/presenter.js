@@ -8,7 +8,7 @@ const NewForm = props => {
   return (
     <div className="new-form">
       <select className="input" name="job">
-        <option value="student" selected="selected">
+        <option value="student" defaultValue>
           학생
         </option>
         <option value="worker">직장인</option>
