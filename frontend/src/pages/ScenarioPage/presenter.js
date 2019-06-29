@@ -57,24 +57,13 @@ const ScenarioPage = props => {
                 data: [
                   {
                     type: "message",
-                    content:
-                      "지난 세 달 평균 지출액보다 많은 지출액이 발생했어요!"
-                  },
-                  {
-                    type: "button",
-                    content: [
-                      { value: "네!", url: "" },
-                      { value: "아뇨.", url: "" }
-                    ]
-                  }
-                ]
-              },
-              {
-                isMine: true,
-                data: [
-                  {
-                    type: "message",
-                    content: "네!"
+                    content: `💸텅장💸 되기 일보직전!! 설정한 세이프핀 금액까지 ${String(
+                      Number(user1.recommendation) -
+                        Number(user1.accumulative_expenditure)
+                    ).replace(
+                      /\B(?=(\d{3})+(?!\d))/g,
+                      ","
+                    )}원 남았으니 지출에 주의하세요!!`
                   }
                 ]
               }
@@ -93,13 +82,19 @@ const ScenarioPage = props => {
                 data: [
                   {
                     type: "message",
-                    content: `BOOM!!!!! 탕진님은 한도금액 ${user2.recommendation.replace(
+                    content: `BOOM!!!!! 탕진님은 세이프핀 금액 ${user2.recommendation.replace(
                       /\B(?=(\d{3})+(?!\d))/g,
                       ","
-                    )}원을 초과하셨어요! 돈을 흥청망청 쓰셨군요!! (초과금액 ${String(
+                    )}원을 초과하셨어요! 돈을 흥청망청 쓰셨군요!! (초과 금액 ${String(
                       Number(user2.accumulative_expenditure) -
                         Number(user2.recommendation)
-                    ).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원)`
+                    ).replace(
+                      /\B(?=(\d{3})+(?!\d))/g,
+                      ","
+                    )}원, 남은 잔액 ${user2.balance.replace(
+                      /\B(?=(\d{3})+(?!\d))/g,
+                      ","
+                    )}원)`
                   },
                   {
                     type: "message",
