@@ -1,0 +1,14 @@
+.scenario-page {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  .btn__wrapper {
+    width: 100%;
+    .btn {
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+  }
+}

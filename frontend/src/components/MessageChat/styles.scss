@@ -1,0 +1,17 @@
+.chat__content {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  max-width: 250px;
+  margin-top: 15px;
+  padding: 18px;
+  background-color: #f1f3f5;
+  border-radius: 0 40px 40px 40px;
+  line-height: 1.3em;
+  font-size: 16px;
+  &.chat__content--mine {
+    background-color: #ffe066;
+    border-radius: 40px 0 40px 40px;
+    margin-top: 20px;
+  }
+}

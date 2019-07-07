@@ -1,0 +1,65 @@
+.chat-input {
+  height: 55px;
+  box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.1);
+  .input__cols {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 17px;
+    .input__col {
+      position: relative;
+      &:last-child {
+        width: 100%;
+        margin-left: 10px;
+      }
+      .money {
+        width: 35px;
+        height: 35px;
+        padding: 5px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #9775fa;
+        cursor: pointer;
+        svg {
+          fill: white;
+        }
+      }
+      .input {
+        width: 100%;
+        height: 40px;
+        border: 0.5px solid #ced4da;
+        border-radius: 30px;
+        padding: 0 15px;
+        text-align: left;
+        &:focus {
+          outline: none;
+        }
+      }
+      .voice {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #51cf66;
+        cursor: pointer;
+        svg {
+          position: absolute;
+          width: 25px;
+          height: 25px;
+          fill: white;
+        }
+      }
+    }
+  }
+}

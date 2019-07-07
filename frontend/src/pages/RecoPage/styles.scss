@@ -1,0 +1,15 @@
+.reco-page {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  .reco-page__wrapper {
+    margin-bottom: 40px;
+    .reco__img {
+      width: 250px;
+      height: 250px;
+      margin-bottom: 40px;
+    }
+  }
+}
